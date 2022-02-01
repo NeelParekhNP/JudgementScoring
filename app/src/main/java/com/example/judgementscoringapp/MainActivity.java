@@ -17,11 +17,11 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    List<String> players;
-    EditText nameInput;
-    TextView mainView;
+    private List<String> players;
+    private EditText nameInput;
+    private TextView mainView;
 
-    Button submitButton, doneButton;
+    private Button submitButton, doneButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,5 +72,13 @@ public class MainActivity extends AppCompatActivity {
                 mainView.setText(players.toString());
             }
         });
+    }
+
+    public List<String> getPlayers() {
+        return players;
+    }
+
+    public void setPlayers(List<String> players) {
+        this.players = players;
     }
 }
