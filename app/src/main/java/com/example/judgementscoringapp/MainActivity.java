@@ -2,6 +2,7 @@ package com.example.judgementscoringapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.KeyEvent;
@@ -10,7 +11,6 @@ import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -70,6 +70,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 mainView.setText(players.toString());
+                Intent intent = new Intent(MainActivity.this, ScoringScreen.class);
+                intent.putStringArrayListExtra("playersList", (ArrayList<String>) players);
+                MainActivity.this.startActivity(intent);
             }
         });
     }

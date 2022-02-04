@@ -11,7 +11,9 @@
         android:theme="@style/Theme.JudgementScoringApp">
         <activity
             android:name=".ScoringScreen"
-            android:exported="false" />
+            android:exported="false"
+            android:label="@string/title_activity_scrolling"
+            android:theme="@style/Theme.JudgementScoringApp.NoActionBar" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
